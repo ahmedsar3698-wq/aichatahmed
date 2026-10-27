@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-family: var(--font-sans);
+    letter-spacing: -0.012em;
+  }
+
+  code, kbd, samp, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+/* --- THEME PRESETS WITH RICH COLORFUL MESH BACKDROPS --- */
+
+/* 1. Midnight Cosmic Galaxy (Default) */
+[data-theme="midnight"], :root:not([data-theme]) {
+  --bg-main: #0b0f1e;
+  --bg-sidebar: rgba(11, 15, 30, 0.85);
+  --bg-card: rgba(18, 24, 48, 0.7);
+  --bg-card-hover: rgba(28, 37, 72, 0.8);
+  --border-subtle: rgba(99, 102, 241, 0.2);
+  --border-accent: rgba(99, 102, 241, 0.6);
+  --accent-primary: #6366f1;
+  --accent-secondary: #8b5cf6;
+  --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%);
+  --glow-color: rgba(99, 102, 241, 0.35);
+  --text-primary: #f8fafc;
+  --text-muted: #94a3b8;
+  --mesh-bg: 
+    radial-gradient(ellipse 90% 60% at 50% -15%, rgba(99, 102, 241, 0.35), transparent 70%),
+    radial-gradient(ellipse 70% 50% at 90% 85%, rgba(139, 92, 246, 0.25), transparent 70%),
+    radial-gradient(ellipse 60% 50% at 10% 85%, rgba(6, 182, 212, 0.2), transparent 70%),
+    #0b0f1e;
+  color-scheme: dark;
+}
+
+/* 2. Cyber Emerald Jade */
+[data-theme="emerald"] {
+  --bg-main: #03140d;
+  --bg-sidebar: rgba(4, 24, 16, 0.85);
+  --bg-card: rgba(8, 38, 25, 0.7);
+  --bg-card-hover: rgba(14, 58, 38, 0.8);
+  --border-subtle: rgba(16, 185, 129, 0.25);
+  --border-accent: rgba(16, 185, 129, 0.65);
+  --accent-primary: #10b981;
+  --accent-secondary: #059669;
+  --accent-gradient: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+  --glow-color: rgba(16, 185, 129, 0.35);
+  --text-primary: #ecfdf5;
+  --text-muted: #6ee7b7;
+  --mesh-bg: 
+    radial-gradient(ellipse 90% 60% at 50% -15%, rgba(16, 185, 129, 0.35), transparent 70%),
+    radial-gradient(ellipse 70% 50% at 90% 85%, rgba(52, 211, 153, 0.25), transparent 70%),
+    radial-gradient(ellipse 60% 50% at 10% 85%, rgba(20, 184, 166, 0.2), transparent 70%),
+    #03140d;
+  color-scheme: dark;
+}
+
+/* 3. Deep Sapphire Ocean */
+[data-theme="ocean"] {
+  --bg-main: #051326;
+  --bg-sidebar: rgba(7, 24, 48, 0.85);
+  --bg-card: rgba(12, 38, 74, 0.7);
+  --bg-card-hover: rgba(18, 56, 108, 0.8);
+  --border-subtle: rgba(6, 182, 212, 0.25);
+  --border-accent: rgba(6, 182, 212, 0.65);
+  --accent-primary: #06b6d4;
+  --accent-secondary: #0284c7;
+  --accent-gradient: linear-gradient(135deg, #0284c7 0%, #06b6d4 50%, #38bdf8 100%);
+  --glow-color: rgba(6, 182, 212, 0.35);
+  --text-primary: #f0fdfa;
+  --text-muted: #7dd3fc;
+  --mesh-bg: 
+    radial-gradient(ellipse 90% 60% at 50% -15%, rgba(6, 182, 212, 0.35), transparent 70%),
+    radial-gradient(ellipse 70% 50% at 90% 85%, rgba(59, 130, 246, 0.28), transparent 70%),
+    radial-gradient(ellipse 60% 50% at 10% 85%, rgba(99, 102, 241, 0.22), transparent 70%),
+    #051326;
+  color-scheme: dark;
+}
+
+/* 4. Sunset Velvet & Rose */
+[data-theme="amber"] {
+  --bg-main: #180b14;
+  --bg-sidebar: rgba(30, 14, 25, 0.85);
+  --bg-card: rgba(48, 22, 40, 0.7);
+  --bg-card-hover: rgba(72, 32, 60, 0.8);
+  --border-subtle: rgba(244, 63, 94, 0.25);
+  --border-accent: rgba(245, 158, 11, 0.65);
+  --accent-primary: #f43f5e;
+  --accent-secondary: #f59e0b;
+  --accent-gradient: linear-gradient(135deg, #e11d48 0%, #f43f5e 50%, #fb923c 100%);
+  --glow-color: rgba(244, 63, 94, 0.35);
+  --text-primary: #fff1f2;
+  --text-muted: #fca5a5;
+  --mesh-bg: 
+    radial-gradient(ellipse 90% 60% at 50% -15%, rgba(244, 63, 94, 0.35), transparent 70%),
+    radial-gradient(ellipse 70% 50% at 90% 85%, rgba(245, 158, 11, 0.25), transparent 70%),
+    radial-gradient(ellipse 60% 50% at 10% 85%, rgba(168, 85, 247, 0.22), transparent 70%),
+    #180b14;
+  color-scheme: dark;
+}
+
+/* 5. Minimalist Clean Frost Light */
+[data-theme="light"] {
+  --bg-main: #f8fafc;
+  --bg-sidebar: rgba(241, 245, 249, 0.9);
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-accent: rgba(79, 70, 229, 0.45);
+  --accent-primary: #4f46e5;
+  --accent-secondary: #6366f1;
+  --accent-gradient: linear-gradient(135deg, #4338ca 0%, #4f46e5 50%, #6366f1 100%);
+  --glow-color: rgba(79, 70, 229, 0.18);
+  --text-primary: #0f172a;
+  --text-muted: #64748b;
+  --mesh-bg: 
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.12), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 90% 90%, rgba(14, 165, 233, 0.08), transparent 60%),
+    #f8fafc;
+  color-scheme: light;
+}
+
+/* Background apply with vibrant mesh transition */
+body {
+  background: var(--mesh-bg);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Subtle dot grid pattern */
+.bg-grid-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+[data-theme="light"] .bg-grid-dots {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.45);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Hide scrollbar utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

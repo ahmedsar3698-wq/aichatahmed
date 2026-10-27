@@ -1,0 +1,6 @@
+{
+  "name": "Nova AI Chatbot",
+  "description": "Premium, lightning-fast AI chatbot powered by Google Gemini with persistent chat history, rich markdown, code syntax highlighting, and responsive design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
